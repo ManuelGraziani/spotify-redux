@@ -1,0 +1,30 @@
+.bg-container {
+    height: 5.5rem;
+    background-color: #282828;
+  }
+  
+  .playerControls .row {
+    justify-content: space-between;
+  }
+  
+  .playerControls a img {
+    width: 14px;
+    margin-top: 1rem;
+    filter: brightness(60%);
+  }
+  
+  .playerControls a:hover {
+    filter: brightness(80%);
+    color: #282828 !important;
+  }
+  
+  .progress {
+    color: white;
+    background-color: #414141 !important;
+    height: 3px !important;
+  }
+  
+  .playBar p {
+    margin-bottom: 20px;
+    color: white;
+  }

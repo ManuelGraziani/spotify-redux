@@ -1,0 +1,75 @@
+.navbar.fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 230px;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    background-color: black;
+    z-index: 1200;
+  }
+
+  .navbar.fixed-left .navbar-collapse .navbar-nav a {
+    color: rgb(145, 145, 145) !important;
+    transition: 0.3s;
+  }
+  
+  .navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
+    color: white !important;
+  }
+  
+  .navbar.fixed-left .navbar-brand {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 3px;
+  }
+  
+  .nav-btn {
+    margin-top: 12em !important;
+    text-align: center;
+  }
+  
+  .nav-btn a {
+    color: rgb(145, 145, 145)!important;
+  }
+  
+  .signup-btn {
+    background-color: white!important;
+    color: black !important;
+    border: 1px solid white !important;
+    border-radius: 20px !important;
+    width: 180px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .signup-btn:hover {
+    color: white !important;
+    background-color: rgb(60, 211, 60) !important;
+    border: 1px solid rgb(60, 211, 60) !important;
+  }
+  
+  .login-btn {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid white !important;
+    border-radius: 20px !important;
+    width: 180px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .login-btn:hover {
+    color: black !important;
+    background-color: white!important;
+  }
+
+  @media screen and (max-width: 936px) {
+    #sidebar {
+      display: none;
+    }
+  }
