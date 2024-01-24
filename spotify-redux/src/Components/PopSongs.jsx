@@ -2,10 +2,11 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Col from "react-bootstrap/esm/Col";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PopSongs() {
   const [pop, setPop] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -22,16 +23,16 @@ export default function PopSongs() {
     <>
     {pop.map((song) => (
         <Col className="col text-center" id={song.id}>
-        <Link to={`/album/${song.album.id}`}>
+        <div onClick={() => navigate(`/album/${song.album.id}`)}>
           <img className="img-fluid" src={song.album.cover_medium} alt="1" />
-        </Link>
+        </div>
         <p>
-          <Link to={`/album/${song.album.id}`}>Album: "{
+          <div onClick={() => navigate(`/album/${song.album.id}`)}>Album: "{
                   song.album.title.length < 16
                     ? `${song.album.title}`
                     : `${song.album.title.substring(0, 16)}...`
-                }"<br /></Link>
-          <Link to={`/artist/${song.artist.id}`}>Artist: {song.artist.name}</Link>
+                }"<br /></div>
+          <div onClick={() => navigate(`/artist/${song.artist.id}`)}>Artist: {song.artist.name}</div>
         </p>
       </Col>
     ))}

@@ -5,6 +5,7 @@ import SideBar from "./Components/SideBar/SideBar";
 import Player from "./Components/Player/Player";
 import ArtistPage from "./pages/ArtistPage";
 import AlbumPage from "./pages/AlbumPage";
+import SearchPage from "./pages/SearchPage";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/artist/:id" element={<ArtistPage />}></Route>
           <Route path="/album/:id" element={<AlbumPage />}></Route>
+          <Route path="/search/:name" element={<SearchPage />}></Route>
         </Routes>
         <Player />
       </BrowserRouter>

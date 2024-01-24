@@ -17,24 +17,26 @@
     transition: 0.3s;
   }
   
-  .imgLinks a p,
-  .mainPage p a {
+  .imgLinks div p,
+  .mainPage p div {
     padding-top: 8px;
     font-size: 12px;
     color: white;
     font-weight: 700;
   }
   
-  .mainPage p a:hover {
+  .mainPage p div:hover {
     color: rgb(138, 138, 138);
+    cursor: pointer;
   }
   
-  .imgLinks a:hover {
+  .imgLinks div:hover {
     text-decoration: none;
   }
   
-  .imgLinks a img:hover {
+  .imgLinks div img:hover {
     filter: brightness(50%);
+    cursor: pointer;
   }
   
   #rock,

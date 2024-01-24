@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
@@ -6,10 +6,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from 'react-bootstrap/Button';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./SideBar.css";
 import logo from "../../assets/Spotify_Logo.png";
 export default function SideBar() {
+  const [value, setValue] = useState("")
+  const navigate = useNavigate()
+
   return (
     <>
       <Col className="col-2">
@@ -30,9 +33,9 @@ export default function SideBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto d-flex flex-column">
-                <Nav.Link href="#">
+                <Link to={"/"} className="nav-link">
                   <i class="bi bi-house-door-fill"></i>&nbsp; Home
-                </Nav.Link>
+                </Link>
                 <Nav.Link href="#">
                   <i class="bi bi-book-fill"></i>&nbsp; Your Library
                 </Nav.Link>
@@ -42,8 +45,9 @@ export default function SideBar() {
                     aria-label="Search"
                     aria-describedby="basic-addon2"
                     className="mb-2"
+                    onChange={(e) => setValue(e.target.value)}
                   />
-                  <Button variant="outline-secondary" id="button-addon2" className="mb-2">
+                  <Button variant="outline-secondary" id="button-addon2" className="mb-2" onClick={() => navigate(`/search/${value}`)}>
                     GO
                   </Button>
                 </InputGroup>
